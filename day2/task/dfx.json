@@ -1,0 +1,32 @@
+{
+  "canisters": {
+    "task_backend": {
+      "main": "src/task_backend/main.mo",
+      "type": "motoko"
+    },
+    "task_frontend": {
+      "dependencies": [
+        "task_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/task_frontend/src/index.html"
+      },
+      "source": [
+        "src/task_frontend/assets",
+        "dist/task_frontend/"
+      ],
+      "type": "assets"
+    },
+    "task_interface":{
+      "main": "./src/task_interface/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
